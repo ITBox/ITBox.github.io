@@ -2,7 +2,7 @@ title:            ITBox
 description:      分享知识，分享快乐.
 disqus_shortname: itbox857
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://itbox.github.io/
+url:              http://itbox.github.io
 
 # Owner/author information
 owner:
