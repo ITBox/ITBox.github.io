@@ -26,7 +26,7 @@ share: true
 * **[Java编程思想第四版](http://pan.baidu.com/share/link?shareid=1823792546&uk=739034238)**
 * **[Effective Java（中文第一版）](http://pan.baidu.com/share/link?shareid=1833475918&uk=739034238)**
 * **[Effective Java（2nd Edition）](http://pan.baidu.com/share/link?sharhttp://pan.baidu.com/share/link?shareid=1833475918&uk=739034238eid=1840803697&uk=739034238)**
-* 
+
 ### JavaScript ###
 
 * **[Professional JavaScript for Web Developers(3rd Edition)](http://pan.baidu.com/share/link?shareid=2488130348&uk=739034238)**
