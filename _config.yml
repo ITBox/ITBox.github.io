@@ -34,10 +34,8 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Theme Setup
-    url: /theme-setup
-  - title: External Link
-    url: http://mademistakes.com
+  - title: 电子书
+    url: /ebook
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
