@@ -8,7 +8,6 @@ tags: [actionbar]
 comments: true
 share: true
 ---
-#Android中ActionBar的使用
 * 随着AndroidDesign的Holo风格越来越普及，Android应用程序也有了自己的设计风格，微信5.2也转向的Holo风格，ActionBar是Holo风格中重要的元素，接下来笔者简单介绍ActionBar如何应用到项目中。
 * ActionBar是android3.0之后（API Level 11）才加入的，所以要想兼容低版本，需要导入支持库v7，v7是13年推出的，在此之前一般是使用Github上得开源项目ActionBarSherlock，既然Google已经推出了支持库，ActionBarSherlock就没必要再介绍了。
 
