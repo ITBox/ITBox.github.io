@@ -42,7 +42,7 @@ share: true
 * 在Activity中调用getSupportActionBar()方法可以获取ActionBar对象，ActionBar默认是显示的，如果想隐藏可以调用ActionBar.hide()方法，显示则调用ActionBar.show(); 如果想更改ActionBar的背景可以调用ActionBar.setBackgroundDrawable();
 
 
-~~~ java
+{% highlight java %}
 	public class BaseActivity extends ActionBarActivity {
 		ActionBar actionBar = getSupportActionBar();
 		// 隐藏ActionBar
@@ -50,7 +50,7 @@ share: true
 		// 设置ActionBar背景
 		actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
 	}
-~~~
+{% endhighlight %}
 
 * 显示“返回按钮”，就是左上角logo左侧有个箭头，可以点击之后关闭当前Activity，这里说“返回按钮”并不是很准确。调用ActionBar.setDisplayHomeAsUpEnabled(true);即可显示。
 
@@ -74,10 +74,10 @@ share: true
 ~~~
 
 `未完待续...`
-~~~ css
+{% highlight css %}
 #container {
     float: left;
     margin: 0 -240px 0 0;
     width: 100%;
 }
-~~~
+{% endhighlight %}
