@@ -9,8 +9,8 @@ comments: true
 share: true
 ---
 #Android中ActionBar的使用
-		随着AndroidDesign的Holo风格越来越普及，Android应用程序也有了自己的设计风格，微信5.2也转向的Holo风格，ActionBar是Holo风格中重要的元素，接下来笔者简单介绍ActionBar如何应用到项目中。
-		ActionBar是android3.0之后（API Level 11）才加入的，所以要想兼容低版本，需要导入支持库v7，v7是13年推出的，在此之前一般是使用Github上得开源项目ActionBarSherlock，既然Google已经推出了支持库，ActionBarSherlock就没必要再介绍了。
+* 随着AndroidDesign的Holo风格越来越普及，Android应用程序也有了自己的设计风格，微信5.2也转向的Holo风格，ActionBar是Holo风格中重要的元素，接下来笔者简单介绍ActionBar如何应用到项目中。
+* ActionBar是android3.0之后（API Level 11）才加入的，所以要想兼容低版本，需要导入支持库v7，v7是13年推出的，在此之前一般是使用Github上得开源项目ActionBarSherlock，既然Google已经推出了支持库，ActionBarSherlock就没必要再介绍了。
 
 * 如果还有v7支持库，打开SDK Manager安装即可
 
@@ -21,14 +21,15 @@ share: true
 ![v7 appcompat](http://d.pcs.baidu.com/thumbnail/2f1ddcb359094f6789fa9de34a0e2ac0?fid=2265016741-250528-2515509101&time=1392214001&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-P3nmQDEBc%2B4INlokfCr8y%2BZIG%2BA%3D&expires=8h&prisign=RK9dhfZlTqV5TuwkO5ihMSi9urWA6/WDVOZJjW161c97pPFvBnDjJvo8Gcuo6pQpogOJnfqRidH27k9J0e2dzkmye5j3Whl2FUBatugDm4Hnjds9K4Te4F7rrSoMdSR+DjBP5X5NZ73oh+eO1xHsl7WF9BasmgJMsrg/wwjCx6TxisYh+duuFB32F+3CHRP8VcUWDxuyGTBer3i6fMyABs2rZduNc1+nDG+QLrJMBIlLz7q+n7Fwbw==&r=590648116&size=c850_u580&quality=100)
 
 
-		接下来新建一个Android Project，笔者使用的是eclipse，然后导入v7中得appcompat项目，这里要注意一下，appcompat项目是包含资源文件的（比如ActionBar的背景图片），只导入jar包是不行的，我们的工程需要关联appcompat项目，如何关联请参考Android Library项目的使用。
+* 接下来新建一个Android Project，笔者使用的是eclipse，然后导入v7中得appcompat项目，这里要注意一下，appcompat项目是包含资源文件的（比如ActionBar的背景图片），只导入jar包是不行的，我们的工程需要关联appcompat项目，如何关联请参考Android Library项目的使用。
 
-		在清单文件中配置activity的Theme，可以在application中配置全局Theme，appcompat提供了三种Theme：
+* 在清单文件中配置activity的Theme，可以在application中配置全局Theme，appcompat提供了三种Theme：
 		黑色主题：@Style/Theme.AppCompat
 		白色主题：@Style/Theme.AppCompat.Light
 		白色主题，黑色ActionBar：@Style/Theme.AppCompat.Light.DarkActionBar
 
-		也可以自定义Style继承上面几种Theme。
+* 也可以自定义Style继承上面几种Theme。
+
 ```
 	<application
         android:allowBackup="true"
@@ -37,9 +38,11 @@ share: true
         android:theme="@style/Theme.AppCompat" >
 ```
 
-		配置完主题之后，我们需要将Activity继承ActionBarActivity，如果需要使用v4包中的FragmentActivity也不需要担心，因为ActionBarActivity继承了FragmentActivity。
+* 配置完主题之后，我们需要将Activity继承ActionBarActivity，如果需要使用v4包中的FragmentActivity也不需要担心，因为ActionBarActivity继承了FragmentActivity。
 
-		在Activity中调用getSupportActionBar()方法可以获取ActionBar对象，ActionBar默认是显示的，如果想隐藏可以调用ActionBar.hide()方法，显示则调用ActionBar.show(); 如果想更改ActionBar的背景可以调用ActionBar.setBackgroundDrawable();
+* 在Activity中调用getSupportActionBar()方法可以获取ActionBar对象，ActionBar默认是显示的，如果想隐藏可以调用ActionBar.hide()方法，显示则调用ActionBar.show(); 如果想更改ActionBar的背景可以调用ActionBar.setBackgroundDrawable();
+
+
 ```
 	public class BaseActivity extends ActionBarActivity {
 		ActionBar actionBar = getSupportActionBar();
@@ -50,11 +53,13 @@ share: true
 	}
 ```
 
-		显示“返回按钮”，就是左上角logo左侧有个箭头，可以点击之后关闭当前Activity，这里说“返回按钮”并不是很准确。调用ActionBar.setDisplayHomeAsUpEnabled(true);即可显示。
+* 显示“返回按钮”，就是左上角logo左侧有个箭头，可以点击之后关闭当前Activity，这里说“返回按钮”并不是很准确。调用ActionBar.setDisplayHomeAsUpEnabled(true);即可显示。
+
 ```
 	actionBar.setDisplayHomeAsUpEnabled(true);
 ```	
-		不过点击并不会有“返回”的效果，我们需要设置它的点击事件。
+
+* 不过点击并不会有“返回”的效果，我们需要设置它的点击事件。
 
 ```
 	@Override
