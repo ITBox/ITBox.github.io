@@ -43,19 +43,19 @@ share: true
 
 
 {% highlight java %}
-public class BaseActivity extends ActionBarActivity {
-	ActionBar actionBar = getSupportActionBar();
-	// 隐藏ActionBar
-	actionBar.hide();
-	// 设置ActionBar背景
-	actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
-}
+	public class BaseActivity extends ActionBarActivity {
+		ActionBar actionBar = getSupportActionBar();
+		// 隐藏ActionBar
+		actionBar.hide();
+		// 设置ActionBar背景
+		actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
+	}
 {% endhighlight %}
 
 * 显示“返回按钮”，就是左上角logo左侧有个箭头，可以点击之后关闭当前Activity，这里说“返回按钮”并不是很准确。调用ActionBar.setDisplayHomeAsUpEnabled(true);即可显示。
 
 {% highlight java %}
-actionBar.setDisplayHomeAsUpEnabled(true);
+	actionBar.setDisplayHomeAsUpEnabled(true);
 {% endhighlight %}
 
 * 不过点击并不会有“返回”的效果，我们需要设置它的点击事件。
