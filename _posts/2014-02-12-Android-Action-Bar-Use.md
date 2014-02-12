@@ -31,10 +31,10 @@ share: true
 
 ~~~ xml
 	<application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat" >
+        	android:allowBackup="true"
+        	android:icon="@drawable/ic_launcher"
+        	android:label="@string/app_name"
+        	android:theme="@style/Theme.AppCompat" >
 ~~~
 
 * 配置完主题之后，我们需要将Activity继承ActionBarActivity，如果需要使用v4包中的FragmentActivity也不需要担心，因为ActionBarActivity继承了FragmentActivity。
@@ -74,3 +74,10 @@ share: true
 ~~~
 
 `未完待续...`
+~~~ css
+#container {
+    float: left;
+    margin: 0 -240px 0 0;
+    width: 100%;
+}
+~~~
