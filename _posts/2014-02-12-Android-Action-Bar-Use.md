@@ -29,13 +29,13 @@ share: true
 
 * 也可以自定义Style继承上面几种Theme。
 
-~~~ xml
+{% highlight xml %}
 	<application
         	android:allowBackup="true"
         	android:icon="@drawable/ic_launcher"
         	android:label="@string/app_name"
         	android:theme="@style/Theme.AppCompat" >
-~~~
+{% endhighlight %}
 
 * 配置完主题之后，我们需要将Activity继承ActionBarActivity，如果需要使用v4包中的FragmentActivity也不需要担心，因为ActionBarActivity继承了FragmentActivity。
 
@@ -43,24 +43,24 @@ share: true
 
 
 {% highlight java %}
-	public class BaseActivity extends ActionBarActivity {
-		ActionBar actionBar = getSupportActionBar();
-		// 隐藏ActionBar
-		actionBar.hide();
-		// 设置ActionBar背景
-		actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
-	}
+public class BaseActivity extends ActionBarActivity {
+	ActionBar actionBar = getSupportActionBar();
+	// 隐藏ActionBar
+	actionBar.hide();
+	// 设置ActionBar背景
+	actionBar.setBackgroundDrawable(new ColorDrawable(Color.RED));
+}
 {% endhighlight %}
 
 * 显示“返回按钮”，就是左上角logo左侧有个箭头，可以点击之后关闭当前Activity，这里说“返回按钮”并不是很准确。调用ActionBar.setDisplayHomeAsUpEnabled(true);即可显示。
 
-~~~ java
-	actionBar.setDisplayHomeAsUpEnabled(true);
-~~~	
+{% highlight java %}
+actionBar.setDisplayHomeAsUpEnabled(true);
+{% endhighlight %}
 
 * 不过点击并不会有“返回”的效果，我们需要设置它的点击事件。
 
-~~~ java
+{% highlight java %}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
@@ -71,13 +71,6 @@ share: true
 			return super.onOptionsItemSelected(item);
 		}
 	}
-~~~
+{% endhighlight %}
 
 `未完待续...`
-{% highlight css %}
-#container {
-    float: left;
-    margin: 0 -240px 0 0;
-    width: 100%;
-}
-{% endhighlight %}
