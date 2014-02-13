@@ -8,7 +8,7 @@ tags: [actionbar]
 comments: true
 share: true
 ---
-![]({{ site.url }}/images/D06A00CC-E866-4B48-B09A-41609D28B275.jpg)
+![](https://github.com/ITBox/ITBox.github.io/blob/master/images/D06A00CC-E866-4B48-B09A-41609D28B275.png?raw=true)
 
 随着AndroidDesign的Holo风格越来越普及，Android应用程序也有了自己的设计风格，微信5.2也转向的Holo风格，ActionBar是Holo风格中重要的元素，接下来笔者简单介绍ActionBar如何应用到项目中。
  
@@ -48,8 +48,6 @@ share: true
 {% endhighlight %}
 
 配置完主题之后，我们需要将Activity继承ActionBarActivity，如果需要使用v4包中的FragmentActivity也不需要担心，因为ActionBarActivity继承了FragmentActivity。
-
-
 
 在Activity中调用getSupportActionBar()方法可以获取ActionBar对象，ActionBar默认是显示的，如果想隐藏可以调用ActionBar.hide()方法，显示则调用ActionBar.show(); 如果想更改ActionBar的背景可以调用ActionBar.setBackgroundDrawable();
 
