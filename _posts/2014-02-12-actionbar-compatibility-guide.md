@@ -7,7 +7,16 @@ modified: 2014-02-11
 tags: [actionbar]
 comments: true
 share: true
+image:
+  feature: abstract-3.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+comments: true
 ---
+
+
+
+![](https://github.com/ITBox/ITBox.github.io/blob/master/images/D06A00CC-E866-4B48-B09A-41609D28B275.png?raw=true)
 
 <section id="table-of-contents" class="toc">
   <header>
@@ -18,8 +27,6 @@ share: true
 {:toc}
 </div>
 </section><!-- /#table-of-contents -->
-
-![](https://github.com/ITBox/ITBox.github.io/blob/master/images/D06A00CC-E866-4B48-B09A-41609D28B275.png?raw=true)
 
 随着AndroidDesign的Holo风格越来越普及，Android应用程序也有了自己的设计风格，微信5.2也转向的Holo风格，ActionBar是Holo风格中重要的元素，接下来笔者简单介绍ActionBar如何应用到项目中。
  
