@@ -11,7 +11,7 @@ share: true
 
 <section id="table-of-contents" class="toc">
   <header>
-    <h3>Contents</h3>
+    <h3>目录</h3>
   </header>
 <div id="drawer" markdown="1">
 *  Auto generated table of contents
@@ -29,7 +29,7 @@ share: true
 
 ###ActionBar的显示与隐藏
 
-* 如果还有v7支持库，打开SDK Manager安装即可
+* 如果还没有v7支持库，打开SDK Manager安装即可
 
 ![SDK Manager](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-1.png?raw=true)
 
