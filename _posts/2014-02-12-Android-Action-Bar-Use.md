@@ -23,9 +23,11 @@ share: true
 * 接下来新建一个Android Project，笔者使用的是eclipse，然后导入v7中得appcompat项目，这里要注意一下，appcompat项目是包含资源文件的（比如ActionBar的背景图片），只导入jar包是不行的，我们的工程需要关联appcompat项目，如何关联请参考Android Library项目的使用。
 
 * 在清单文件中配置activity的Theme，可以在application中配置全局Theme，appcompat提供了三种Theme：
+```
 		黑色主题：@Style/Theme.AppCompat
 		白色主题：@Style/Theme.AppCompat.Light
 		白色主题，黑色ActionBar：@Style/Theme.AppCompat.Light.DarkActionBar
+```
 
 * 也可以自定义Style继承上面几种Theme。
 
