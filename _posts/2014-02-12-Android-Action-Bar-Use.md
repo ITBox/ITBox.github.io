@@ -13,11 +13,11 @@ share: true
 
 * 如果还有v7支持库，打开SDK Manager安装即可
 
-![SDK Manager](http://d.pcs.baidu.com/thumbnail/4d97af1734c5b9334e95e6787e0672b6?fid=2265016741-250528-2272655597&time=1392214001&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-eAAaBEqaS%2FXWpWiBhvHyWZOEPas%3D&expires=8h&prisign=RK9dhfZlTqV5TuwkO5ihMSi9urWA6/WDVOZJjW161c97pPFvBnDjJvo8Gcuo6pQpogOJnfqRidH27k9J0e2dzkmye5j3Whl2FUBatugDm4Hnjds9K4Te4F7rrSoMdSR+DjBP5X5NZ73oh+eO1xHsl7WF9BasmgJMsrg/wwjCx6TxisYh+duuFB32F+3CHRP8VcUWDxuyGTBer3i6fMyABs2rZduNc1+nDG+QLrJMBIlLz7q+n7Fwbw==&r=926430185&size=c850_u580&quality=100)
+![SDK Manager](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-1.png?raw=true)
 
 * 安装之后，在sdk目录下的extras目录中可应该可以找到v4,v7,v13支持库，v7中包含了三个项目，ActionBar只需要使用v7中的appcompat项目。
 
-![v7 appcompat](http://d.pcs.baidu.com/thumbnail/2f1ddcb359094f6789fa9de34a0e2ac0?fid=2265016741-250528-2515509101&time=1392214001&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-P3nmQDEBc%2B4INlokfCr8y%2BZIG%2BA%3D&expires=8h&prisign=RK9dhfZlTqV5TuwkO5ihMSi9urWA6/WDVOZJjW161c97pPFvBnDjJvo8Gcuo6pQpogOJnfqRidH27k9J0e2dzkmye5j3Whl2FUBatugDm4Hnjds9K4Te4F7rrSoMdSR+DjBP5X5NZ73oh+eO1xHsl7WF9BasmgJMsrg/wwjCx6TxisYh+duuFB32F+3CHRP8VcUWDxuyGTBer3i6fMyABs2rZduNc1+nDG+QLrJMBIlLz7q+n7Fwbw==&r=590648116&size=c850_u580&quality=100)
+![v7 appcompat](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-2.png?raw=true)
 
 
 * 接下来新建一个Android Project，笔者使用的是eclipse，然后导入v7中得appcompat项目，这里要注意一下，appcompat项目是包含资源文件的（比如ActionBar的背景图片），只导入jar包是不行的，我们的工程需要关联appcompat项目，如何关联请参考Android Library项目的使用。
