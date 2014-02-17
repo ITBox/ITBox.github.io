@@ -183,12 +183,13 @@ public boolean onOptionsItemSelected(MenuItem item) {
 ####使用分离的ActionBar####
 
 ![](http://developer.android.com/images/ui/actionbar-splitaction@2x.png)
-ActionBar可以分割成屏幕上方和屏幕下方两部分类显示（如上图所示）。分割的ActionBar可以让空间能够更合理的利用。
+ActionBar可以分割成屏幕上方和屏幕下方两部分来显示（如上图所示）。分割的ActionBar可以让空间能够更合理的利用。
 
 为了实现分离的ActionBar，必须做以下两件事情：
 
-1. 添加uiOptions="splitActionBarWhenNarrow"到<activity>元素或 <application> 元素中。这个属性只能在API 14+上起作用，低版本将忽略这个属性。
-2.为了支持低版本，在<activity>元素中添加一个<mata-data>元素，
+1.  添加uiOptions="splitActionBarWhenNarrow"到<activity>元素或 <application> 元素中。这个属性只能在API 14+上起作用，低版本将忽略这个属性。
+ 
+2. 为了支持低版本，在<activity>元素中添加一个<mata-data>元素，
 
 {% highlight xml%}
 
