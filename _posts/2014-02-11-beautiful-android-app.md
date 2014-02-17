@@ -4,7 +4,7 @@ category: android-design
 title: 漂亮的Android应用
 description: "设计漂亮的Android应用汇总."
 modified: 2013-05-31
-tags: [listview]
+tags: []
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
