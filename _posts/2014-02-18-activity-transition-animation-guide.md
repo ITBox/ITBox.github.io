@@ -13,9 +13,7 @@ image:
   creditlink: 
 comments: true
 ---
-Activity跳转动画是指一个Activity跳转到另外一个Activity的动画效果，我们可以通过Acitivity的
-
-overridePendingTransition()方法实现跳转动画。
+Activity跳转动画是指一个Activity跳转到另外一个Activity的动画效果，我们可以通过Acitivity的overridePendingTransition()方法实现跳转动画。
 
 这个函数接受两个参数：
 
@@ -29,11 +27,9 @@ overridePendingTransition()方法实现跳转动画。
 
 {% highlight java %}
 
-Intent intent = new Intent(MainActivity.this,
-						OtherActivity.class);
+Intent intent = new Intent(MainActivity.this,OtherActivity.class);
 startActivity(intent);
-overridePendingTransition(R.anim.push_up_in,
-							R.anim.push_up_out);
+overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
 
 {% endhighlight %}
 
@@ -55,11 +51,9 @@ ActivityOptions类提供了三个方法
 
 {% highlight java %}
 
-Intent intent = new Intent(MainActivity.this,
-						OtherActivity.class);
+Intent intent = new Intent(MainActivity.this,OtherActivity.class);
 startActivity(intent);
-overridePendingTransition(R.anim.push_up_in,
-							R.anim.push_up_out);
+overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
 
 {% endhighlight %}
 
