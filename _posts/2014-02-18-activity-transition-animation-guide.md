@@ -52,8 +52,8 @@ ActivityOptions类提供了三个方法
 {% highlight java %}
 
 Intent intent = new Intent(MainActivity.this,OtherActivity.class);
-startActivity(intent);
-overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
+ActivityOptions opts = ActivityOptions.makeCustomAnimation(MainActivity.this, R.anim.fade, R.anim.hold);
+startActivity(intent, opts.toBundle());
 
 {% endhighlight %}
 
