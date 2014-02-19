@@ -11,6 +11,7 @@ share: true
 comments: true
 ---
 #一、简介
+
 ##1.     参考资料:
 [维基百科_REST](http://zh.wikipedia.org/wiki/REST)<br/>
 [维基百科_讨论:REST](http://zh.wikipedia.org/wiki/Talk:REST)<br/>
