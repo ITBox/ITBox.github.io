@@ -60,4 +60,9 @@ startActivity(intent, opts.toBundle());
 
 <div markdown="0"><a href="https://github.com/ITBox/ActivityTransitionAnimationSample" class="btn btn-info">示例下载</a></div>
 
+<figure>
+<img src="https://github.com/ITBox/ITBox.github.io/blob/master/images/psb.jpg?raw=true" alt="">
+	<figcaption><strong>关注ITBox微信</strong></figcaption>
+</figure>
+
 
