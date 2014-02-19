@@ -10,7 +10,6 @@ share: true
 
 comments: true
 ---
-REST设计风格的理解及在Android开发中的应用
 #一、简介
 ##1.     参考资料:
 [维基百科_REST](http://zh.wikipedia.org/wiki/REST)<br/>
