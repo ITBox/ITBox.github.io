@@ -22,6 +22,7 @@ comments: true
 * 对资源的操作包括获取、创建、修改和删除资源，正好对应HTTP协议提供的GET、POST、PUT和DELETE方法。
 * 通过操作资源的表现形式来操作资源。
 * 资源的表现形式则是XML、HTML或任何其他格式，取决于使用场景。
+
 ##3.     要求
 * 客户端和服务器结构
 * 连接协议具有无状态性
@@ -52,5 +53,6 @@ comments: true
        事实上，采用4种操作方式是违反了“资源是由URI来指定”的，在Android的ContentProvider中就不存在这么多操作方式，对数据的操作都是在URI中标记的。
        
 ##3、WebApi设计中的REST
-      @ //TODO 思考中
+
+@ //TODO 思考中
  
