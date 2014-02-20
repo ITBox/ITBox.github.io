@@ -60,8 +60,6 @@ Android中的ContentProvider是最典型的REST设计方式，所有的数据操
 ##2、常见误区之HTTP方法
 
 有一个常见的误区，就是REST的查、增、改、删操作应对应HTTP的GET、POST、PUT、DELETE方法。其实采用这种对应的方式只是可选，维基百科_讨论：REST建议单独使用GET或POST方式。
-	   
-事实上，采用4种操作方式是违反了“资源是由URI来指定”的，在Android的ContentProvider中就不存在这么多操作方式，对数据的操作都是在URI中标记的。
        
 ##3、WebApi设计中的REST
 
