@@ -16,11 +16,11 @@ comments: true
 [维基百科_讨论:REST](http://zh.wikipedia.org/wiki/Talk:REST)<br/>
 [IBM developerWorks_最佳实践：更好的设计你的 REST API](https://www.ibm.com/developerworks/cn/web/1103_chenyan_restapi/)
 
-*(1) 从一个url、文件或string获得html并解析
-*(2) 利用dom遍历或css选择器查找、提取数据
-*(3) 操作html元素
-*(4) 根据白名单去除用于提交的非法数据防止xss攻击
-*(5) 输出整齐的html
+* (1) 从一个url、文件或string获得html并解析
+* (2) 利用dom遍历或css选择器查找、提取数据
+* (3) 操作html元素
+* (4) 根据白名单去除用于提交的非法数据防止xss攻击
+* (5) 输出整齐的html
 
 #二、方法介绍
 
