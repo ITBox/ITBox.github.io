@@ -12,10 +12,6 @@ comments: true
 ---
 #一、作用
 
-[维基百科_REST](http://zh.wikipedia.org/wiki/REST)<br/>
-[维基百科_讨论:REST](http://zh.wikipedia.org/wiki/Talk:REST)<br/>
-[IBM developerWorks_最佳实践：更好的设计你的 REST API](https://www.ibm.com/developerworks/cn/web/1103_chenyan_restapi/)
-
 * (1) 从一个url、文件或string获得html并解析
 * (2) 利用dom遍历或css选择器查找、提取数据
 * (3) 操作html元素
