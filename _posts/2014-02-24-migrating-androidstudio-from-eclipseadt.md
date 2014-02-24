@@ -23,6 +23,7 @@ comments: true
 
 ####1. 为项目生成Gradle所需的文件
 * 我们先看看EclipseADT中项目的节本结构
+
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-4.png?raw=true)
 * 接下来为项目生成Gradle所需的相关文件，这里注意一下，ADT版本必须是22以上的，不是的在SDK Manager中更新到最新版本。接下来，在项目上右键->Export，然后选择Generate Gradle build files。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-3.png?raw=true)
