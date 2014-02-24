@@ -25,15 +25,18 @@ comments: true
 * 我们先看看EclipseADT中项目的节本结构
 
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-4.png?raw=true)
+
 * 接下来为项目生成Gradle所需的相关文件，这里注意一下，ADT版本必须是22以上的，不是的在SDK Manager中更新到最新版本。接下来，在项目上右键->Export，然后选择Generate Gradle build files。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-3.png?raw=true)
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-5.png?raw=true)
+
 * 一路next，直到finish。搞定，这时候已经生成的Gradle的相关文件，看下一现在的结构。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-6.png?raw=true)
 
 ####2. 从AudioStudio中导入项目
 * 打开AudioStudio，选择Import Project，选择项目的目录。OK即可导入。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-7.png?raw=true)
+
 * 主要就是build.gradle文件。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-8.png?raw=true)
 
