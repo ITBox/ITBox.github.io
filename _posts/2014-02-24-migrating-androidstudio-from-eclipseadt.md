@@ -37,4 +37,6 @@ comments: true
 * 主要就是build.gradle文件。
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-8.png?raw=true)
 
+#### 扩展阅读
 * 参考官方说明 [Migrating from Eclipse](http://developer.android.com/sdk/installing/migrate.html)
+* [AndroidStudio快捷键](http://www.android-studio.org/index.php/docs/experience/142-androidstudio-shortcut-keys)
