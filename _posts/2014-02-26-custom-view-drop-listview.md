@@ -19,17 +19,17 @@ comments: true
 DragSortListView 适用于带有任何优先级的列表:收藏夹、播放列表、备忘录等。笔者认为这是目前Android开源实现拖动排序操作最完美的方案。
 
 ####一. 如何使用
-*(1)数据重排. 拖拽排序重排ListView底层的数据顺序。由于DSLV 不知道您是如何组织您的数据的，所以重新组织数据必须由您自己通过实现相关的接口来实现。
-*(2)开始/停止拖动. 通过调用DSLV的 startDrag() 和 stopDrag() 函数来启动或者停止拖动操作。 DragSortController这个助手类，提供了所有常用的 开始/停止/删除 拖拽操作功能。
-*(3)Floating View(拖动的View). 通过实现 FloatViewManager 接口可以控制 拖动的View 的视觉效果和行为。这样您可以显示任何内容作为 拖动的View，并且可以在拖动过程中更新其位置和显示状态。 DragSortController 助手类已经实现了该接口并提供了一些易用的实现方式。
-*第一条是必须的。如上所述 第二条和第三条可以通过 DragSortController 助手类实现。通过研究示例项目中的代码 可以更加深入的理解上述内容。
+* (1) 数据重排. 拖拽排序重排ListView底层的数据顺序。由于DSLV 不知道您是如何组织您的数据的，所以重新组织数据必须由您自己通过实现相关的接口来实现。
+* (2) 开始/停止拖动. 通过调用DSLV的 startDrag() 和 stopDrag() 函数来启动或者停止拖动操作。 DragSortController这个助手类，提供了所有常用的 开始/停止/删除 拖拽操作功能。
+* (3) Floating View(拖动的View). 通过实现 FloatViewManager 接口可以控制 拖动的View 的视觉效果和行为。这样您可以显示任何内容作为 拖动的View，并且可以在拖动过程中更新其位置和显示状态。 DragSortController 助手类已经实现了该接口并提供了一些易用的实现方式。
+* 第一条是必须的。如上所述 第二条和第三条可以通过 DragSortController 助手类实现。通过研究示例项目中的代码 可以更加深入的理解上述内容。
 
 
 ####二. XML 布局描述
 * DragSortListView 可以和标准的View一样在XML布局文件中声明。 在示例项目中提供了几种演示 。新加的额外属性定义如下，描述的格式如下
 * <xml attr名称>: (<datatype 数据类型>, <默认值>) <属性描述>.
 
-###1.XML 属性
+### 1.XML 属性
 
 * collapsed_height: (dimension, 1px) 拖动其实位置占位符的高度。不能为0.
 * drag_scroll_start: (float, 0.3) 拖动时开始滚动ListView的区域（为DSLV 高度的分数值，在0到1之前）
