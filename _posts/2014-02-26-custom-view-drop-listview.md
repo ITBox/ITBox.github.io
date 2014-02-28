@@ -1,6 +1,6 @@
 ---
 layout: post
-category: android-development
+category: android-opensource
 title: Android自定义控件-DragSortListview
 description: ""
 modified: 2014-02-26
