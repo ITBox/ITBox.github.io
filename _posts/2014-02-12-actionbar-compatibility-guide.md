@@ -578,7 +578,7 @@ titleTextStyle:标题样式
 
 ###下拉列表样式###
 
-自定义下拉列表样式可以通过继承Widget.AppCompat.ActionBar.TabView来实现。查看Widget.AppCompat.ActionBar.TabView源码
+自定义下拉列表样式可以通过继承Widget.AppCompat.Spinner.DropDown.ActionBar来实现。查看Widget.AppCompat.Spinner.DropDown.ActionBar源码
 
 {% highlight xml %}
 
