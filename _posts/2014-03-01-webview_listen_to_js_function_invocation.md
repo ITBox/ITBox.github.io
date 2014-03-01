@@ -9,10 +9,10 @@
 
 {% highlight java %}
 
-	class FunctionCallInterceptor {
-       public void reportCall(String functionName, String result) {
-       // TODO some code, handling interception
-       }
+    class FunctionCallInterceptor {
+        public void reportCall(String functionName, String result) {
+            // TODO some code, handling interception
+        }
     }
 
 {% endhighlight %}
@@ -21,7 +21,7 @@
 
 {% highlight java %}
 
-	mWebView.addJavascriptInterface(new FunctionCallInterceptor(), 'Interceptor');
+    mWebView.addJavascriptInterface(new FunctionCallInterceptor(), 'Interceptor');
 
 {% endhighlight %}
 
@@ -29,7 +29,7 @@
 
 {% highlight java %}
 
-	wrapFunc('myFunction'); // wraps myFunction in the source
+    wrapFunc('myFunction'); // wraps myFunction in the source
 
 {% endhighlight %}
 
@@ -37,7 +37,7 @@
 
 {% highlight java %}
 
-	mWebView.getSettings().setJavaScriptEnabled(true);
+    mWebView.getSettings().setJavaScriptEnabled(true);
 
 {% endhighlight %}
 
@@ -45,7 +45,7 @@
 
 {% highlight java %}
 
-	mWebView.getSettings().setJavaScriptEnabled(true);
+    mWebView.getSettings().setJavaScriptEnabled(true);
 
 {% endhighlight %}
 
@@ -53,7 +53,7 @@
 
 {% highlight java %}
 
-	mWebView.setWebViewClient(new WebViewClient {
+    mWebView.setWebViewClient(new WebViewClient {
         @Override
         public void onPageFinished (WebView view, String url) {
             // here page is loaded
@@ -71,7 +71,8 @@ ADD因此，最终的解决办法是：
 
 {% highlight java %}
 
-    String wrapFuncCode = "function wrapFunc ...... "; // or maybe place it in resources?
+    String wrapFuncCode = "function wrapFunc ...... ";
+    // or maybe place it in resources?
     mWebView.addJavascriptInterface(new FunctionCallInterceptor(), 'Interceptor');
     mWebView.getSettings().setJavaScriptEnabled(true);
     mWebView.setWebViewClient(new WebViewClient {
