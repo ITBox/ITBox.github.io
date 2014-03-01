@@ -12,9 +12,8 @@ comments: true
 ---
 
 
-# WebView添加自定义JS函数
 
-原文[Listen to javascript function invocation from java - Android](http://stackoverflow.com/questions/9306801/listen-to-javascript-function-invocation-from-java-android)
+原文连接[Listen to javascript function invocation from java - Android](http://stackoverflow.com/questions/9306801/listen-to-javascript-function-invocation-from-java-android)
 
 
 假设我有一个托管服务器上的一些HTML5/javascript文件。当单击HTML5页面上的一个按钮一个JavaScript函数将被调用。我要监听被调用函数，并得到该函数返回的json。
