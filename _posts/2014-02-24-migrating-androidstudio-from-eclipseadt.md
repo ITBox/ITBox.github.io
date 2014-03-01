@@ -43,3 +43,15 @@ comments: true
 #### 扩展阅读
 * 参考官方说明 [Migrating from Eclipse](http://developer.android.com/sdk/installing/migrate.html)
 * [AndroidStudio快捷键](http://www.android-studio.org/index.php/docs/experience/142-androidstudio-shortcut-keys)
+
+
+<iframe src="http://baidu.com" width="500" height="200"></iframe>
+
+* ----------
+
+<object width="450" height="500" align="middle" id="reader" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+<param value="window" name="wmode">
+<param value="true" name="allowfullscreen"><param name="allowscriptaccess" value="always">
+<param value="http://wenku.baidu.com/static/flash/apireader.swf?docurl=http://wenku.baidu.com/play&amp;docid=a04a62ea360cba1aa811da7f&amp;title=%E5%80%92%E9%9C%89%E7%86%8A%E7%BB%8F%E5%85%B8ppt&amp;doctype=ppt&amp;fpn=5&amp;npn=5&amp;readertype=external&catal=0&amp;cdnurl=http://txt.wenku.baidu.com/play" name="movie"><embed width="450" align="middle" height="500" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="reader" src="http://wenku.baidu.com/static/flash/apireader.swf?docurl=http://wenku.baidu.com/play&amp;docid=a04a62ea360cba1aa811da7f&amp;title=%E5%80%92%E9%9C%89%E7%86%8A%E7%BB%8F%E5%85%B8ppt&amp;doctype=ppt&amp;fpn=5&amp;npn=5&amp;readertype=external&catal=0&amp;cdnurl=http://txt.wenku.baidu.com/play" wmode="window" allowscriptaccess="always" bgcolor="#FFFFFF" ver="9.0.0" allowfullscreen="true">
+</embed>
+</object>
