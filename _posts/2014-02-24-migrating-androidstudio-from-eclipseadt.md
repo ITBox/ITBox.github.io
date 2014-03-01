@@ -50,10 +50,7 @@ JavaScript 能改变 HTML 元素的样式。
 
 <script>
 function myFunction()
-{
 x=document.getElementById("demo") // 找到元素
 x.style.color="#ff0000";          // 改变样式
-}
 </script>
 
-<button type="button" onclick="myFunction()">点击这里</button>
