@@ -44,3 +44,16 @@ comments: true
 * 参考官方说明 [Migrating from Eclipse](http://developer.android.com/sdk/installing/migrate.html)
 * [AndroidStudio快捷键](http://www.android-studio.org/index.php/docs/experience/142-androidstudio-shortcut-keys)
 
+<p id="demo">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+
+<script>
+function myFunction()
+{
+x=document.getElementById("demo") // 找到元素
+x.style.color="#ff0000";          // 改变样式
+}
+</script>
+
+<button type="button" onclick="myFunction()">点击这里</button>
