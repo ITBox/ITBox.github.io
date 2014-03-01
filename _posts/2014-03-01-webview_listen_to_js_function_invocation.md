@@ -1,3 +1,17 @@
+---
+layout: post
+category: android-opensource
+title: WebView添加自定义JS函数
+description: ""
+modified: 2014-03-01
+tags: [android]
+comments: true
+share: true
+
+comments: true
+---
+
+
 # WebView添加自定义JS函数
 
 原文[Listen to javascript function invocation from java - Android](http://stackoverflow.com/questions/9306801/listen-to-javascript-function-invocation-from-java-android)
