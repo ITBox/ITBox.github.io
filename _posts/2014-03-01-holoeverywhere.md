@@ -36,7 +36,6 @@ HoloEverywhere中集成了android-support-v7-appcompat包，所以在低版本�
 2. 所有的Fragment继承org.holoeverywhere.app.***Fragment
 3. 为清单文件<application>标签添加android:name="org.holoeverywhere.app.Application"，或者自定义Application继承org.holoeverywhere.app.Application。
 4. 使用org.holoeverywhere.widget包下的控件替代Android原生的控件。
-5. 
 <a href="https://github.com/Prototik/HoloEverywhere" class="btn btn-info">GitHub下载</a>
 
 
