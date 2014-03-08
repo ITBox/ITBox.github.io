@@ -35,8 +35,8 @@ viewPager.startAutoScroll();
 
 {% endhighlight %}
 
-####二. 属
-性介绍
+####二. 属性介绍
+
 *    startAutoScroll() 启动自动滚动
 *    stopAutoScroll() 停止自动滚动
 *    setInterval(long) 设置自动滚动的间隔时间，单位为毫秒
