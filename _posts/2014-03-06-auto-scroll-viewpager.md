@@ -29,7 +29,8 @@ android:layout_height="wrap_content" />
 
 AutoScrollViewPager viewPager = (AutoScrollViewPager)findViewById(R.id.view_pager);
 viewPager.setAdapter(new ImagePagerAdapter(context, imageIdList));
-viewPager.setOnPageChangeListener(new MyOnPageChangeListener());// 可以放自己的小圆点或字样 implements OnPageChangeListener viewPager.setInterval(2000);
+viewPager.setOnPageChangeListener(new MyOnPageChangeListener());
+// 可以放自己的小圆点或字样 implements OnPageChangeListener viewPager.setInterval(2000);
 viewPager.startAutoScroll();
 
 {% endhighlight %}
