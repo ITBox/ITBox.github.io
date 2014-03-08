@@ -19,18 +19,15 @@ comments: true
 
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/image-9.png?raw=true)
 
-```
-新建一个jni目录，用于存放编译的文件以及*.mk文件，libs目录里面存放编译之后的*.so文件，不同目录对应不同的CPU架构，我们可以通过Application.mk文件配置需要编译的架构类型，添加如下内容。
-```
+* 新建一个jni目录，用于存放编译的文件以及*.mk文件，libs目录里面存放编译之后的*.so文件，不同目录对应不同的CPU架构，我们可以通过Application.mk文件配置需要编译的架构类型，添加如下内容。
+
 {% highlight java %}
 
 APP_ABI := armeabi armeabi-v7a x86 mips
 
 {% endhighlight %}
 
-```
-jni目录下的 include、libspeex是Speex库的文件，speex-jni是我们jni所需的“中介”文件，ndk方面的知识这里不再多说。进入正题，我们需要编写一个java类声明native方法用来调用so中的函数，直接上代码。
-```
+* jni目录下的 include、libspeex是Speex库的文件，speex-jni是我们jni所需的“中介”文件，ndk方面的知识这里不再多说。进入正题，我们需要编写一个java类声明native方法用来调用so中的函数，直接上代码。
 
 {% highlight java %}
 
@@ -83,9 +80,7 @@ public class Speex {
 
 {% endhighlight %}
 
-```
-然后是speex_jni.cpp文件
-```
+* 然后是speex_jni.cpp文件
 
 {% highlight java %}
 
@@ -202,8 +197,6 @@ JNIEXPORT void JNICALL Java_cc_itbox_testspeex_media_Speex_close
 
 {% endhighlight %}
 
-```
-准备好后，使用ndk-build进行编译。
-```
+* 准备好后，使用ndk-build进行编译。
 
 * [Speex编译Demo代码下载](https://github.com/ITBox/TestSpeexBuild)
