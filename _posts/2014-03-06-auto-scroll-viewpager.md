@@ -16,14 +16,14 @@ comments: true
 
 ####一. 如何使用
 * (1) <自己的包名.AutoScrollViewPager
-*       android:id="@+id/view_pager"
-*       android:layout_width="match_parent"
-*       android:layout_height="wrap_content" />
+*          android:id="@+id/view_pager"
+*          android:layout_width="match_parent"
+*          android:layout_height="wrap_content" />
 * (2) AutoScrollViewPager viewPager = (AutoScrollViewPager)findViewById(R.id.view_pager);
-*     viewPager.setAdapter(new ImagePagerAdapter(context, imageIdList));
-*     viewPager.setOnPageChangeListener(new MyOnPageChangeListener());// 可以放自己的小圆点或字样   implements OnPageChangeListener
-*     viewPager.setInterval(2000);
-*     viewPager.startAutoScroll();
+*          viewPager.setAdapter(new ImagePagerAdapter(context, imageIdList));
+*          viewPager.setOnPageChangeListener(new MyOnPageChangeListener());// 可以放自己的小圆点或字样   implements OnPageChangeListener
+*          viewPager.setInterval(2000);
+*          viewPager.startAutoScroll();
 
 ####二. 属性介绍
 *    startAutoScroll() 启动自动滚动
