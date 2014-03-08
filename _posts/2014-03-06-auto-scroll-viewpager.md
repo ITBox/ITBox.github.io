@@ -25,13 +25,17 @@ android:layout_height="wrap_content" />
 
 {% endhighlight %}
 
-* (2) AutoScrollViewPager viewPager = (AutoScrollViewPager)findViewById(R.id.view_pager);
-*          viewPager.setAdapter(new ImagePagerAdapter(context, imageIdList));
-*          viewPager.setOnPageChangeListener(new MyOnPageChangeListener());// 可以放自己的小圆点或字样   implements OnPageChangeListener
-*          viewPager.setInterval(2000);
-*          viewPager.startAutoScroll();
+{% highlight java %}
 
-####二. 属性介绍
+AutoScrollViewPager viewPager = (AutoScrollViewPager)findViewById(R.id.view_pager);
+viewPager.setAdapter(new ImagePagerAdapter(context, imageIdList));
+viewPager.setOnPageChangeListener(new MyOnPageChangeListener());// 可以放自己的小圆点或字样 implements OnPageChangeListener viewPager.setInterval(2000);
+viewPager.startAutoScroll();
+
+{% endhighlight %}
+
+####二. 属
+性介绍
 *    startAutoScroll() 启动自动滚动
 *    stopAutoScroll() 停止自动滚动
 *    setInterval(long) 设置自动滚动的间隔时间，单位为毫秒
