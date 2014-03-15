@@ -20,7 +20,7 @@ comments: true
 
 下面介绍如何修改jar文件的包名，需要用到一个小工具，叫做jarjar.jar
 
-* 下载地址：http://code.google.com/p/jarjar/downloads/list
+* 下载地址：[http://code.google.com/p/jarjar/downloads/list](http://code.google.com/p/jarjar/downloads/list)
 
 这里我们以gson.jar为例，在gson.jar包目录下新建一个文本文件，名字随意，例如rule.txt，写入下面的内容。
 
