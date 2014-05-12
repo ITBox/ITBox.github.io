@@ -1,6 +1,6 @@
 ---
 layout: post
-category: android
+category: android-development
 title: NineOldAndroids动画库
 description: ""
 modified: 2014-05-13
