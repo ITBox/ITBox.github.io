@@ -1,10 +1,10 @@
 ---
 layout: post
-category: Android
+category: android
 title: NineOldAndroids动画库
 description: ""
-modified: 2014-05-12
-tags: [Android]
+modified: 2014-05-13
+tags: [android]
 comments: true
 share: true
 image:
@@ -13,7 +13,6 @@ image:
   creditlink: 
 comments: true
 ---
-
 ##介绍
 
 ![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/NineOldAndroids.png.png?raw=true)
