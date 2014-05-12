@@ -15,7 +15,7 @@ comments: true
 ---
 ##介绍
 
-![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/NineOldAndroids.png.png?raw=true)
+![](https://raw.githubusercontent.com/baoyongzhang/test_pages/gh-pages/NineOldAndroids.png)
 
 Android3.0推出了全新的[AnimationAPI](http://android-developers.blogspot.com/2011/02/animation-in-honeycomb.html)，使用起来很方便，但是不能在3.0以下版本使用，[NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)是一个可以在任意Android版本上使用的AnimationAPI，API和Android3.0中的类似。
 
@@ -28,7 +28,7 @@ Android3.0推出了全新的[AnimationAPI](http://android-developers.blogspot.co
 类名与官方的API是对应的，只是包名为`com.nineoldandroids.animation`。
 
 
-![](https://github.com/baoyongzhang/test_pages/blob/gh-pages/NineOldAndroid_demo.gif.png?raw=true)
+![](https://raw.githubusercontent.com/baoyongzhang/test_pages/gh-pages/NineOldAndroid_demo.gif)
 
 ##使用方法
 首先导入NineOldAndroids的jar包。在Android3.0中，View中有一个animate方法，NineOldAndroids中提供了ViewPropertyAnimator.animate(View)与其对应，可以选择静态导入。
