@@ -7,10 +7,11 @@ modified: 2014-03-20
 tags: [android]
 comments: true
 share: true
-
 comments: true
 ---
 有的时候会出现莫名的溢出，用了这个会好，项目中用到的。
+
+
 {% highlight java %}
 
 public class ListViewEx extends ListView {
