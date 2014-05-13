@@ -33,12 +33,21 @@ Android3.0推出了全新的[AnimationAPI](http://android-developers.blogspot.co
 ![](https://raw.githubusercontent.com/baoyongzhang/test_pages/gh-pages/NineOldAndroid_demo.gif)
 
 ##使用方法
-首先导入NineOldAndroids的jar包。在Android3.0中，View中有一个animate方法，NineOldAndroids中提供了ViewPropertyAnimator.animate(View)与其对应，可以选择静态导入。
+首先导入NineOldAndroids的jar包。在Android3.0中，`View`中有一个`animate`方法，NineOldAndroids中提供了`ViewPropertyAnimator.animate(View)`与其对应，可以选择静态导入。
 
 {% highlight java %}
 
-ViewPropertyAnimator.animate(mImageView).setDuration(5000)
+// 官方API（3.0以上）
+mView.animate().setDuration(5000).rotationY(720).x(100).y(100).start();
+		
+// NineOldAndroids
+ViewPropertyAnimator.animate(mView).setDuration(5000)
 				.rotationY(720).x(100).y(100).start();
+				
+// 可以使用静态导入
+import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
+// 直接调用animate方法
+animate(mView).setDuration(5000).rotationY(720).x(100).y(100).start();
 
 {% endhighlight %}
 
@@ -50,50 +59,67 @@ ViewPropertyAnimator.animate(mImageView).setDuration(5000)
 {% highlight java %}
 
 
-ViewPropertyAnimator.animate(mIView).setDuration(5000)
-				.rotationY(720).x(100).y(100)
-				.setListener(new AnimatorListenerAdapter() {
-					@Override
-					public void onAnimationStart(Animator animation) {
-						super.onAnimationStart(animation);
-						// 动画开始
-					}
-					@Override
-					public void onAnimationCancel(Animator animation) {
-						super.onAnimationCancel(animation);
-						// 动画取消
-					}
-					@Override
-					public void onAnimationEnd(Animator animation) {
-						super.onAnimationEnd(animation);
-						// 动画结束
-					}
-					@Override
-					public void onAnimationRepeat(Animator animation) {
-						super.onAnimationRepeat(animation);
-						// 动画重复启动
-					}
-				}).start();
+ViewPropertyAnimator
+	.animate(mIView)
+	.setDuration(5000)
+	.rotationY(720)
+	.x(100).y(100)
+	.setListener(new AnimatorListenerAdapter() {
+		@Override
+		public void onAnimationStart(Animator animation) {
+			super.onAnimationStart(animation);
+			// 动画开始
+		}
+		@Override
+		public void onAnimationCancel(Animator animation) {
+			super.onAnimationCancel(animation);
+			// 动画取消
+		}
+		@Override
+		public void onAnimationEnd(Animator animation) {
+			super.onAnimationEnd(animation);
+			// 动画结束
+		}
+		@Override
+		public void onAnimationRepeat(Animator animation) {
+			super.onAnimationRepeat(animation);
+			// 动画重复启动
+		}
+	}).start();
 
 
 {% endhighlight %}
 
-颜色动画，例如让背景颜色从红色到蓝色，并反转回去，而且无线重复。
+`ViewPropertyAnimator`对象提供了取消动画的方法
+
+{% highlight java %}
+ViewPropertyAnimator animate = ViewPropertyAnimator.animate(mDropTv);
+/* ... */
+animate.start();	// 开始动画
+animate.cancel();	// 取消动画
+
+{% endhighlight %}
+
+简单的动画效果使用`ViewPropertyAnimator`一般可以满足，下面介绍一下高级玩法。核心是`ObjectAnimator`类。
+
+###举例
+
+* 背景颜色从红色到蓝色，并反转回去，而且无限重复。
 
 {% highlight java %}
 
 
-ValueAnimator colorAnim = ObjectAnimator.ofInt(this, "backgroundColor", /*红色*/0xFFFF8080, /*蓝色*/0xFF8080FF);
+ValueAnimator colorAnim = ObjectAnimator.ofInt(mView, "backgroundColor", /*红色*/0xFFFF8080, /*蓝色*/0xFF8080FF);
 colorAnim.setDuration(3000);
-colorAnim.setEvaluator(new ArgbEvaluator());
-colorAnim.setRepeatCount(ValueAnimator.INFINITE);   // 无线重复
+colorAnim.setEvaluator(new ArgbEvaluator());	// ARGB
+colorAnim.setRepeatCount(ValueAnimator.INFINITE);   // 无限重复
 colorAnim.setRepeatMode(ValueAnimator.REVERSE); // 反转回去
 colorAnim.start();
 
 
 {% endhighlight %}
 
-使用动画集合，实现复杂的动画效果。
+* 使用动画集合`AnimatorSet`，可以使用多个`ObjectAnimator`，实现复杂的动画效果。
 
 {% highlight java %}
 
@@ -114,10 +140,17 @@ set.setDuration(5 * 1000).start();
 
 {% endhighlight %}
 
+###ObjectAnimator说明
+
+ObjectAnimator是动画对象，通过ObjectAnimator提供的一系列of开头的静态方法创建。
+
+
+
 使用`ObjectAnimator`需要传入`PropertyName`，`PropertyName`可以参考`ViewPropertyAnimator.animate()`中提供的方法名。
 
 ##总结
 NineOldAndroids的API与官方的API基本一致，使用很方便。能够轻松实现各种酷炫动画效果。
+一般情况使用
 
 ##参考
 * Github主页：https://github.com/JakeWharton/NineOldAndroids
