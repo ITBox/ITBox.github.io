@@ -49,6 +49,7 @@ ViewPropertyAnimator.animate(mImageView).setDuration(5000)
 
 {% highlight java %}
 
+
 ViewPropertyAnimator.animate(mIView).setDuration(5000)
 				.rotationY(720).x(100).y(100)
 				.setListener(new AnimatorListenerAdapter() {
@@ -74,11 +75,13 @@ ViewPropertyAnimator.animate(mIView).setDuration(5000)
 					}
 				}).start();
 
+
 {% endhighlight %}
 
 颜色动画，例如让背景颜色从红色到蓝色，并反转回去，而且无线重复。
 
 {% highlight java %}
+
 
 ValueAnimator colorAnim = ObjectAnimator.ofInt(this, "backgroundColor", /*红色*/0xFFFF8080, /*蓝色*/0xFF8080FF);
 colorAnim.setDuration(3000);
@@ -87,11 +90,13 @@ colorAnim.setRepeatCount(ValueAnimator.INFINITE);   // 无线重复
 colorAnim.setRepeatMode(ValueAnimator.REVERSE); // 反转回去
 colorAnim.start();
 
+
 {% endhighlight %}
 
 使用动画集合，实现复杂的动画效果。
 
 {% highlight java %}
+
 
 AnimatorSet set = new AnimatorSet();
 set.playTogether(
@@ -105,6 +110,7 @@ set.playTogether(
     ObjectAnimator.ofFloat(myView, "alpha", 1, 0.25f, 1)
 );
 set.setDuration(5 * 1000).start();
+
 
 {% endhighlight %}
 
