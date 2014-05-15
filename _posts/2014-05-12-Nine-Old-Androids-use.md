@@ -104,7 +104,7 @@ animate.cancel();	// 取消动画
 
 ###举例
 
-* 背景颜色从红色到蓝色，并反转回去，而且无限重复。
+* <a name="demo1">背景颜色从红色到蓝色，并反转回去，而且无限重复。</a>
 
 {% highlight java %}
 
@@ -119,7 +119,7 @@ colorAnim.start();
 
 {% endhighlight %}
 
-* 使用动画集合`AnimatorSet`，可以使用多个`ObjectAnimator`，实现复杂的动画效果。
+* <a name="demo2">使用动画集合`AnimatorSet`，可以使用多个`ObjectAnimator`，实现复杂的动画效果。</a>
 
 {% highlight java %}
 
@@ -140,20 +140,51 @@ set.setDuration(5 * 1000).start();
 
 {% endhighlight %}
 
+`AnimatorSet`主要方法有两个，`playSequentially` 是创建按顺序执行的动画，`playTogether`是创建同时执行的动画。
+
 ###ObjectAnimator说明
 
-ObjectAnimator是动画对象，通过ObjectAnimator提供的一系列of开头的静态方法创建。
+`ObjectAnimator`是动画对象，通过ObjectAnimator提供的一系列of开头的静态方法创建。
+
+创建一般需要传入三个参数
+* `target`，Object类型，可不是View哦
+* `PropertyName`，String类型或Property类型，用于描述target中的属性
+* 数组，`ofInt()`就是int数组
+
+`ObjectAnimator`原理是这样的：会调用`target`的`set`方法，设置`PropertyName`的值，这个值的计算方式是，根据Duration时长和第三个参数数组来计算出来当前时间的值。然后调用`set`方法设置进去。例如上面更改<a href="#demo1">背景颜色的实例</a>，`PropertyName`是`backgroundColor`，数组是两个颜色值，运行动画就会根据Duration计算当前的颜色值，调用`target`的`setBackgroundColor`方法设置进去，从而改变了背景颜色。
+
+再看改<a href="#demo2">`AnimatorSet`的实例</a>，`PropertyName`是`rotationX`、`translationX`之类的，这几个属性是在Android3.0以上才有的，所以调用`set`方法会出错的，通过观察`ObjectAnimator`，发现对这几个属性做了特殊处理，提前预制了这几个属性值。
+
+{% highlight java %}
+
+static {
+        PROXY_PROPERTIES.put("alpha", PreHoneycombCompat.ALPHA);
+        PROXY_PROPERTIES.put("pivotX", PreHoneycombCompat.PIVOT_X);
+        PROXY_PROPERTIES.put("pivotY", PreHoneycombCompat.PIVOT_Y);
+        PROXY_PROPERTIES.put("translationX", PreHoneycombCompat.TRANSLATION_X);
+        PROXY_PROPERTIES.put("translationY", PreHoneycombCompat.TRANSLATION_Y);
+        PROXY_PROPERTIES.put("rotation", PreHoneycombCompat.ROTATION);
+        PROXY_PROPERTIES.put("rotationX", PreHoneycombCompat.ROTATION_X);
+        PROXY_PROPERTIES.put("rotationY", PreHoneycombCompat.ROTATION_Y);
+        PROXY_PROPERTIES.put("scaleX", PreHoneycombCompat.SCALE_X);
+        PROXY_PROPERTIES.put("scaleY", PreHoneycombCompat.SCALE_Y);
+        PROXY_PROPERTIES.put("scrollX", PreHoneycombCompat.SCROLL_X);
+        PROXY_PROPERTIES.put("scrollY", PreHoneycombCompat.SCROLL_Y);
+        PROXY_PROPERTIES.put("x", PreHoneycombCompat.X);
+        PROXY_PROPERTIES.put("y", PreHoneycombCompat.Y);
+    }
 
 
-
-使用`ObjectAnimator`需要传入`PropertyName`，`PropertyName`可以参考`ViewPropertyAnimator.animate()`中提供的方法名。
+{% endhighlight %}
 
 ##总结
 NineOldAndroids的API与官方的API基本一致，使用很方便。能够轻松实现各种酷炫动画效果。
-一般情况使用
+* 一般情况使用`ViewPropertyAnimator`就可以了，可以设置动画监听器，实现连贯动画，和其他处理。
+* `ObjectAnimator`创建的`target`是`Object`，可以传入任何对象，原理是调用`set`方法，利用这个特性可以实现很多自定义的效果有点和`Scroller`类似。
 
 ##参考
-* Github主页：https://github.com/JakeWharton/NineOldAndroids
-* 官方网站：http://nineoldandroids.com/
-* ListView动画库，使用了NineOldAndroids：https://github.com/nhaarman/ListViewAnimations
-* 官方API：http://android-developers.blogspot.com/2011/02/animation-in-honeycomb.html
+* Github主页：[https://github.com/JakeWharton/NineOldAndroids](https://github.com/JakeWharton/NineOldAndroids)
+* 官方网站：[http://nineoldandroids.com/](http://nineoldandroids.com/)
+* ListView动画库：[https://github.com/nhaarman/ListViewAnimations](https://github.com/nhaarman/ListViewAnimations)
+* Android3.0 API：[http://android-developers.blogspot.com/2011/02/animation-in-honeycomb.html](http://android-developers.blogspot.com/2011/02/animation-in-honeycomb.html)
+* Android官方文档：[http://developer.android.com/reference/android/view/animation/package-summary.html](http://developer.android.com/reference/android/view/animation/package-summary.html)
