@@ -147,6 +147,7 @@ set.setDuration(5 * 1000).start();
 `ObjectAnimator`是动画对象，通过ObjectAnimator提供的一系列of开头的静态方法创建。
 
 创建一般需要传入三个参数
+
 * `target`，Object类型，可不是View哦
 * `PropertyName`，String类型或Property类型，用于描述target中的属性
 * 数组，`ofInt()`就是int数组
@@ -179,6 +180,7 @@ static {
 
 ##总结
 NineOldAndroids的API与官方的API基本一致，使用很方便。能够轻松实现各种酷炫动画效果。
+
 * 一般情况使用`ViewPropertyAnimator`就可以了，可以设置动画监听器，实现连贯动画，和其他处理。
 * `ObjectAnimator`创建的`target`是`Object`，可以传入任何对象，原理是调用`set`方法，利用这个特性可以实现很多自定义的效果有点和`Scroller`类似。
 
